@@ -38,7 +38,7 @@ body{
     justify-content: space-between;
     padding:0 4px;
 }
-.btn-decrease, .btn-increase, .btn-reset{
+.btn{
     cursor:pointer;
     width: 6.9em;
     height: 2.5rem;
@@ -51,7 +51,7 @@ body{
     letter-spacing: 1.7px;
     margin: 3px;
 }
-.btn-decrease:hover, .btn-increase:hover, .btn-reset:hover{
+.btn:hover{
     color:aquamarine;
     background-color: steelblue;
     border:  rgba(227,255,212,1) solid 2px;

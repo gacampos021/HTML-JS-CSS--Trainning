@@ -1,25 +1,27 @@
-const decreaseBtn = document.querySelector(".btn-decrease");
-const increaseBtn = document.querySelector(".btn-increase");
-const resetBtn = document.querySelector(".btn-reset");
+const Btn = document.querySelectorAll(".btn");
 const num = document.querySelector(".num");
 var n=0;
 
-decreaseBtn.addEventListener('click', function(){
-    n=n-1;
-    num.textContent=n;
-    color_num(n);
-});
-
-increaseBtn.addEventListener('click', function(){
-    n=n+1;
-    num.textContent=n;
-    color_num(n);
-});
-
-resetBtn.addEventListener('click',function(){
-    n=0;
-    num.textContent=n;
-    color_num(n);
+Btn.forEach(function(btn){
+    btn.addEventListener('click', function(e){
+        const current_btn = e.currentTarget.classList;
+        if(current_btn.contains('increase'))
+        {
+            n++;
+            num.textContent=n;
+        }
+        else if(current_btn.contains('decrease'))
+        {
+            n--;
+            num.textContent=n;
+        }
+        else
+        {
+            n=0;
+            num.textContent=n;
+        }
+        color_num(n)
+    })
 });
 
 const color_num = function(n){
